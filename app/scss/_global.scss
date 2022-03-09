@@ -1,0 +1,43 @@
+@import '../scss/vars';
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $bg;
+  color: #fff;
+  @extend %urbanist-500;
+  font-size: 16px;
+  line-height: 29px;
+}
+.main{
+  &--fixed{
+    padding-top: 124px;
+  }
+  flex-grow: 1;
+}
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid{
+  max-width: 1346px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.subtitle {
+  text-align: center;
+  @extend %urbanist-600;
+  font-size: 18px;
+  line-height: 22px;
+  color: $accent;
+  margin-bottom: 12px;
+}
+.title {
+  text-align: center;
+  font-size: 48px;
+  line-height: 62px;
+  @extend %righteous-400;
+  margin-bottom: 56px;
+}

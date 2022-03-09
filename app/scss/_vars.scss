@@ -1,0 +1,44 @@
+//fonts
+
+%inter-400{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+%inter-700{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+%righteous-400{
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+}
+%urbanist-500{
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+}
+%urbanist-600{
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+}
+
+//colors
+
+$bg: #14110E;
+$brown: #1C1814;
+$accent: #C99E71;
+$blue: #121315;
+$whiteop: rgba(#fff,.8);
+
+//
+%btn{
+  @extend %inter-700;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: $accent;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all .3s;
+  &:hover{
+    background-color: #c08343;
+  }
+}

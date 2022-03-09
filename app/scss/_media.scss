@@ -1,0 +1,440 @@
+@media (max-width: 1346px){
+  .menu{
+    &--right{
+      margin-left: 0;
+    }
+  }
+  .logo{
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1200px){
+  .footer{
+    &__inner{
+      flex-wrap: wrap;
+    }
+    &__list{
+      order: 1;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &__form{
+      margin-bottom: 20px;
+    }
+  }
+  .processes{
+    &__inner{
+      flex-wrap: wrap;
+    }
+    &__item{
+      margin-right: 20px;
+      margin-bottom: 30px;
+    }
+  }
+  .history{
+    &__inner{
+      display: block;
+    }
+    &__images{
+      display: flex;
+      justify-content: space-between;
+      min-width: auto;
+      height: 500px;
+      margin-bottom: 10px;
+    }
+    &__images-box{
+      max-width: 320px;
+      width: 100%;
+    }
+    &__content{
+      padding-top: 50px;
+      padding-bottom: 20px;
+      margin-left: 0;
+    }
+    &__content-subtitle{
+      text-align: center;
+    }
+    &__content-title{
+      text-align: center;
+    }
+  }
+  .popular-products{
+    &__items{
+      flex-wrap: wrap;
+    }
+  }
+  .product-item{
+    margin-right: 20px;
+    margin-bottom: 30px;
+    max-width: 47%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .news{
+    &__items{
+      flex-wrap: wrap;
+    }
+  }
+  .news-item{
+    max-width: 47%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1100px){
+  .logo{
+    margin: 0;
+  }
+  .header-top{
+    &__nav{
+      margin-left: auto;
+    }
+  }
+  .menu{
+    order: 1;
+    &--right{
+      display: none;
+    }
+    &__btn{
+      margin-left: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      position: relative;
+      &::after,
+      &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $accent;
+        left: 0;
+      }
+      &::after{
+        top: 0;
+      }
+      &::before{
+        bottom: 0;
+      }
+      span{
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $accent;
+      }
+    }
+    &__list{
+      top: 124px;
+    }
+    &__list{
+      .menu__list--right{
+        display: block;
+        width: 100%;
+      }
+      position: absolute;
+      width: 100%;
+      left: 0;
+      display: block;
+      background-color: $bg;
+      transition: all .3s;
+      transform: translateY(-300%);
+    }
+    &__list--active{
+      transform: translateY(0%);
+    }
+    &__item{
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    &__link{
+      display: block;
+      padding: 10px 0;
+    }
+    &__item + .menu__item{
+      margin-left: 0;
+    }
+  }
+  .header-content{
+    &__title{
+      margin: 0 auto 32px;
+      text-align: center;
+    }
+    &__text{
+      margin: 0 auto 64px;
+      text-align: center;
+    }
+    &__links{
+      justify-content: center;
+    }
+  }
+  .history{
+    &__images{
+      height: 300px;
+    }
+  }
+  .testimonial{
+    &__swiper{
+      padding-bottom: 100px;
+    }
+    &__slide{
+      max-width: 100%;
+    }
+  } 
+  .reservation{
+    &__img{
+      max-width: 400px;
+    }
+  }
+}
+
+@media (max-width: 992px){
+  .shopping{
+    &__inner{
+      display: block;
+    }
+    &__img{
+      margin: 0 auto 10px;
+    }
+    &__content{
+      margin: 0 auto;
+    }
+    &__content-title{
+      text-align: center;
+    }
+    &__content-link{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 850px){
+  .processes{
+    &__item{
+      max-width: 100%;  
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .product-item{
+    margin-right: 0;
+    max-width: 100%;
+  }
+  .popular-menu{
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+    }
+    &__item{
+      max-width: 100%;
+      justify-content: space-between; 
+    }
+    &__item-price{
+      margin-left: 0;
+    }
+  }
+  .reservation{
+    &__img{
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .footer{
+    &__list{
+      justify-content: space-between;
+    }
+    &__list-item + .footer__list-item {
+      margin-left: 0;
+    }
+  }
+  .processes{
+    padding: 70px 0 35px;
+  }
+  .news{
+    padding: 35px 0 70px;
+  }
+  .history,
+  .popular-products,
+  .shopping,
+  .testimonial,
+  .reservation{
+    padding: 35px 0;
+  }
+  .reservation{
+    &__inner{
+      display: block;
+    }
+    &__img{
+      max-width: 100%;
+      height: 400px;
+    }
+  }
+  .news-item{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px){
+  .title{
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .header-content{
+    &__inner{
+      padding-top: 70px;
+    }
+    &__title{
+      font-size: 42px;
+      line-height: 60px;
+    }
+    &__text{
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 35px;
+    }
+    &__links{
+      flex-direction: column;
+      align-items: center;
+    }
+    &__link{
+      margin-bottom: 20px;
+    }
+    &__link--popup{
+      position: relative;
+    }
+  }
+  .footer{
+    &__list{
+      justify-content: space-between;
+    }
+    &__list-item{
+      width: 30%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  .processes{
+    &__item{
+      height: 100%;
+    }
+    &__item-img{
+      width: 100%;
+      height: 350px;
+    }
+  }
+  .history{
+    &__images{
+      display: none;
+    }
+    &__content{
+      padding-left: 10px;
+      padding-right: 10px;
+
+    }
+    &__content-title{
+      margin-bottom: 20px;
+    }
+  }
+  .shopping{
+    &__inner{
+      padding: 72px 20px;
+    }
+    &__img{
+      display: none;
+    }
+    &__content{
+      max-width: 100%;
+    }
+  }
+  .popular-menu{
+    &__item{
+      flex-direction: column;
+      gap: 20px;
+    }
+    &__item-title{
+      text-align: center;
+    }
+    &__item-price{
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .title{
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 30px;
+  }
+  .header-top{
+    &__nav-link + .header-top__nav-link {
+      margin-left: 20px;
+    }
+  }
+  .footer{
+    &__logo{
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    &__list{
+      display: block;
+    }
+    &__list-item{
+      width: 100%;
+    }
+    &__list-link{
+      display: block;
+    }
+    &__form{
+      max-width: 100%;
+      order: 2;
+    }
+  }
+  .product-item{
+    padding: 20px 20px;
+    &__img-link{
+      width: 100%;
+    }
+    &__img{
+      max-width: 100%;
+      height: 350px;
+    }
+  }
+  .testimonial{
+    &__slide-top{
+      display: block;
+    }
+    &__slide-img{
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+    &__slide-star{
+      display: none;
+    }
+  }
+  .reservation{
+    &__content{
+      padding: 36px 20px;
+    }
+  }
+  .news-item{
+    &__img{
+      height: 330px;
+    }
+    &__title{
+      margin-bottom: 20px;
+    }
+    &__date{
+      display: none;
+    }
+  }
+}
