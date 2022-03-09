@@ -4,56 +4,7 @@
 @import 'global';
 @import 'vars';
 
-.test{
-  margin-top: 40px;
-  position: relative;
-  width: 250px;
-  height: 60px;
-  background-color: $bg;
-  border: 2px solid $accent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  .right{
-    display: block;
-    position: absolute;
-    border-left: 18px solid $accent;
-    border-top: 9px solid transparent;
-    border-bottom: 9px solid transparent;
-    top: 50%;
-    right: -19px;
-    transform: translateY(-50%);
-    &::after{
-      content: '';
-      position: absolute;
-      border-left: 16px solid $bg;
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-      top: -8px;
-      right: 3px;
-    }
-  }
-  .left{
-    display: block;
-    position: absolute;
-    border-right: 18px solid $accent;
-    border-top: 9px solid transparent;
-    border-bottom: 9px solid transparent;
-    top: 50%;
-    left: -19px;
-    transform: translateY(-50%);
-    &::after{
-      content: '';
-      position: absolute;
-      border-right: 16px solid $bg;
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-      top: -8px;
-      right: -19px;
-    }
-  }
-}
+
 
 .header {
   background-image: url('../images/top-bg.jpg');
@@ -562,6 +513,8 @@
     line-height: 32px;
     color: #fff;
     @extend %urbanist-600;
+    display: flex;
+    align-items: center;
   }
   &__form-input::placeholder{
     font-size: 18px;
@@ -569,6 +522,13 @@
     text-transform: capitalize;
     color: $whiteop;
     @extend %urbanist-600;
+  }
+  &__form-input[type = date],
+  &__form-input[type = time]{
+    &::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+  }   
   }
   &__form-btn {
     margin: 32px auto 0;

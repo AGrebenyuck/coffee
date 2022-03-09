@@ -36,13 +36,6 @@ $(function(){
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-      renderFraction: function(current, total){
-        return `<span class="${current}"></span>/<span class="${total}"></span> People`
-      },
-    },
     scrollbar: {
       el: '.swiper-scrollbar',
     },
@@ -51,12 +44,32 @@ $(function(){
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 0,
-        centeredSlides: true
+        centeredSlides: true,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'custom',
+          // renderFraction: function(current, total){
+          //   return `<span class="${current}"></span>/<span class="${total}"></span> People`
+          // },
+          renderCustom: function (swiper, current, total) {
+            return (current) + '/' + (total) + ' People';
+          },
+        }
       },
       1100: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 40,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'custom',
+          // renderFraction: function(current, total){
+          //   return `<span class="${current}"></span>/<span class="${total}"></span> People`
+          // },
+          renderCustom: function (swiper, current, total) {
+            return (current * 2) + '/' + (total * 2) + ' People';
+          },
+        }
       }
     }
   });

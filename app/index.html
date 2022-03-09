@@ -69,11 +69,6 @@
     </div>
     <div class="header-content" id="home">
       <div class="container">
-        <div class="test">
-          Test
-          <div class="right"></div>
-          <div class="left"></div>
-        </div>
         <div class="header-content__inner">
           <h1 class="header-content__title">
             Enjoy Your
@@ -84,7 +79,7 @@
           </p>
           <div class="header-content__links">
             <a class="header-content__link" href="#">Test Coffee</a>
-            <a class="header-content__link--popup" href="#">
+            <a class="header-content__link--popup" data-fancybox href="https://youtu.be/dpKCvSx0UCs">
               <span></span>
               Play video
             </a>
@@ -546,9 +541,9 @@
               Booking a table
             </h3>
             <form class="reservation__form" action="#">
-              <input class="reservation__form-input" type="text" placeholder="Person">
-              <input class="reservation__form-input" type="date" placeholder="Date">
-              <input class="reservation__form-input" type="time" placeholder="Time">
+              <input class="reservation__form-input" type="text" placeholder="Person"/>
+              <input class="reservation__form-input" type="text" placeholder="Date" onfocus="(this.type='date')"/>
+              <input class="reservation__form-input" type="text" placeholder="Time" onfocus="(this.type='time')"/>
               <button class="reservation__form-btn" type="submit">BOOK S TABLE</button>
             </form>
           </div>
